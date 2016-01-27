@@ -5,4 +5,7 @@ import const
 
 gen = Generator(const.words.words)
 
-print(gen.generate())
+for i in range(100):
+    fd = open("output/" + str(i) + ".html", "wt")
+    fd.write(gen.generate())
+    fd.close()
